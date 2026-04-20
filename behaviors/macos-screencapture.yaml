@@ -1,0 +1,16 @@
+bundle:
+  name: macos-screencapture-behavior
+  version: 0.1.0
+  description: Adds macOS screen capture capability — list apps/windows, capture screenshots
+
+tools:
+  - module: tool-macos-screencapture
+    source: ./modules/tool-macos-screencapture
+
+agents:
+  include:
+    - macos-screencapture:screen-observer
+
+context:
+  include:
+    - macos-screencapture:context/screencapture-awareness.md

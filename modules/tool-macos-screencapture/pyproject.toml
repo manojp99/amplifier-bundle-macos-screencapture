@@ -1,0 +1,22 @@
+[project]
+name = "amplifier-module-tool-macos-screencapture"
+version = "0.1.0"
+description = "macOS screen capture tools for Amplifier — list apps, list windows, capture screenshots"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.entry-points."amplifier.modules"]
+tool-macos-screencapture = "amplifier_module_tool_macos_screencapture:mount"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["amplifier_module_tool_macos_screencapture"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
