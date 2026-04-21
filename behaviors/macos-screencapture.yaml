@@ -5,7 +5,7 @@ bundle:
 
 tools:
   - module: tool-macos-screencapture
-    source: ./modules/tool-macos-screencapture
+    source: ../modules/tool-macos-screencapture
 
 agents:
   include:
